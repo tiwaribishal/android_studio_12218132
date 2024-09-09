@@ -1,0 +1,108 @@
+fun main() {
+    var x=5;
+    println("Leftshift of 5 by one="+x.shl(1))
+    println("Rightshift of 5 by one="+x.shr(1))
+    println("Rightshift of 5 by two="+x.shr(2))
+}
+
+/*
+1.The binary representation of 5 is 0101.
+Shifting left by 1 position gives 1010.
+1010 in binary is 10 in decimal.
+2.The binary representation of 5 is 0101.
+Shifting right by 1 position gives 0010.
+0010 in binary is 2 in decimal.
+3.Right shift operation: x.shr(2)
+x = 5 (binary: 0101)
+Shifting right by 2 positions: 0001 (binary)
+0001 in decimal is 1
+*/
+
+val a = 5
+val b = 3
+val result = a and b
+println(result)
+//In the bitwise AND example, the binary representation of 5 is 101 and the binary representation of 3 is 011. Performing a bitwise AND operation on these two numbers results in 001, which is equal to 1 in decimal.
+
+val x = 5
+val y = 10
+
+if (x > 0 && y < 15) {
+    println("Both conditions are true")
+} else {
+    println("At least one condition is false")
+}
+
+//elvis OPERATOR- the Elvis operator ?: can also be used in combination with a null string check to handle null or empty strings
+fun main()
+{
+  var str:String?=null
+    var str2: String?="May be declared as null"
+    var len1:Int=str?.length?:-1
+    var len2:Int=str2?.length?:-1
+    println("Length of string1 is ${len1}")
+     println("Length of string2 is ${len2}")
+}
+
+// when keyword is used as a replacement for the traditional switch statement found in other programming languages.
+//The when expression allows you to check a value against multiple conditions and execute different blocks of code based on those conditions.
+fun main()
+{
+ var choice=2
+    val result=when(choice){
+        1->"hello"
+        2->" hi"
+        3->"Namaste"
+        4->"Vanakkam"
+        else->"No need"//can use func in the else{like this}
+    }
+    println(result)
+}
+//forloop
+fun main()
+{
+    for(i in 1..5)
+    println(i)
+    //In Kotlin, the var keyword is not used when declaring the loop variable in a for loop because the loop variable is implicitly
+    //declared as a read-only variable within the loop. This is to enforce immutability and prevent accidental modification of the loop variable inside the loop.
+   //When using a for loop in Kotlin, the loop variable is automatically declared as a read-only variable that cannot be reassigned within the loop body. This helps in preventing unintended side effects and makes the code more predictable and easier to understand.
+}
+fun main() {
+    
+   
+    for (i in 1..10) { // iterating over a range
+    // body of the loop
+        print(" "+i+" ")
+}
+    println()
+
+for (i in 10 downTo 1) { // iterating in reverse
+    // body of the loop
+    print(" "+i+" ")
+}
+println()
+
+for (i in 1 until 10) { // excluding the upper bound
+    // body of the loop
+    print(" "+i+" ")
+}
+println()
+for (i in 0 until 10 step 2) { // iterating with a step
+    // body of the loop
+    print(" "+i+" ")
+}
+}
+/*
+ 1  2  3  4  5  6  7  8  9  10 
+ 10  9  8  7  6  5  4  3  2  1 
+ 1  2  3  4  5  6  7  8  9 
+ 0  2  4  6  8 
+*/
+
+while (condition) {
+    // body of the loop
+}
+
+do {
+    // body of the loop
+} while (condition)
